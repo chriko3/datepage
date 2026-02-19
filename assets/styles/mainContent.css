@@ -19,7 +19,7 @@
     cursor: pointer;
     transition: transform 0.3s ease, opacity 0.3s ease;
     min-height: 200px;
-    font-size: 35px;
+    font-size: 25px;
     touch-action: pan-y;
     user-select: none;
 }
