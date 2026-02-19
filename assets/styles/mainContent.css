@@ -1,0 +1,35 @@
+.mainContent{
+    display:flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:5px 0px;
+    gap: 5px
+}
+
+.element {
+    position: relative;
+    background-color: #d4d6ae;
+    color: rgb(31, 31, 31);
+    border-radius: 15px;
+    padding: 20px;
+    flex: 1 1 calc(50% - 10px);
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.element iframe {
+    border-radius: 15px;
+}
+
+.element.swipe-out {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+
+.element:hover{
+    scale: 1.02;
+}

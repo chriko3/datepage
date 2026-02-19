@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>n+c</title>
+    <link rel="stylesheet" href="assets/styles/styles.css">
+    <link rel="stylesheet" href="assets/styles/mainContent.css">
+    <script src="assets/js/functions.js"></script>
+    <script src="assets/js/fireBase.js"></script>
+    <script src="assets/templates/templates.js"></script>
+
+</head>
+<body>
+    <div class="overlay" id="overlay">
+        <div class="overlay-content">
+            <input id="input" type="text" autofocus>
+            <div>
+            <Button onclick="addDateIdeaToDB('dateIdea')">Speichern</Button>
+            <Button onclick="closeAddNewDate()">Abbrechen</Button>
+            </div>
+            <div>
+           <input type="checkbox" id="checkbox" checked>
+            Random Emoji
+            </div>
+        </div>
+    </div>
+
+<header>
+    <h1>DATE PAGE 💖📸</h1>
+</header>
+
+<div class="mainContent" id="mainContent">
+    <div class="element" onclick="loadDateIdeas()">
+        Date Ideen 💐
+    </div>
+
+    <div class="element">
+        Meilensteine ✨
+    </div>
+
+    <div class="element" onclick="loadLoveBox2()">
+        LoveBox 2.0 📦
+    </div>
+</div>
+    
+</body>
+</html>
