@@ -17,36 +17,41 @@ function renderLoveBox2(){
     let backButton = document.getElementById('backButton');
     backButton.classList.add('full-width');
 
-
     const targetDate = new Date('2025-11-28');
-    mainContent.innerHTML += elementNormalTemplate('28.11.2025 🫶🏻');
+    mainContent.innerHTML += elementNormalTemplate('28.11.25 🫶🏻');
 
     const today = new Date();
     const diffTime = targetDate - today;
     const diffDays = Math.abs(Math.ceil((targetDate - today) / (1000 * 60 * 60 * 24)));
     mainContent.innerHTML += elementNormalTemplate(`${diffDays} Tage 📆`);
 
-    mainContent.innerHTML += elementNormalTemplate('3.11 Erstes Date 👫🏼' + iframeTemplate());
+    mainContent.innerHTML += elementNormalTemplate('3.11.25 Erstes Date 👫🏼' + iframeTemplate());
     const elements = mainContent.querySelectorAll('.element');
     const lastElement = elements[elements.length - 1];
     lastElement.classList.add('full-width');
 
     mainContent.innerHTML += elementNormalTemplate(`
-    6.11 Kino Good fortune 🎥
+    6.11.25 Kino Good fortune 🎥
     <img src="assets/img/kino.png" alt="Kino" class="">
     `);
 
     mainContent.innerHTML += elementNormalTemplate(`
-    10.11 Erster Kuss 😘
+    10.11.25 Erster Kuss 😘
     <img src="assets/img/smarties.png" alt="Kino" class="">
     `);
 
     mainContent.innerHTML += elementNormalTemplate(`
-    7.11 Nini Eltern 🍫`);
+    7.12.25 Nini Eltern 🍫`);
  
     mainContent.innerHTML += elementNormalTemplate(`
-    13.12 Chrisi Eltern 💐`);
+    13.12.25 Chrisi Eltern 💐`);
+
+    mainContent.innerHTML += elementNormalTemplate(`
+    14.02.26 El Picoso 🌵`);
 
     mainContent.innerHTML += elementNormalTemplate(`
     Viele weitere gemeinsame Momente warten auf uns 🌟`);
+    const elements2 = mainContent.querySelectorAll('.element');
+    const lastElement2 = elements2[elements2.length - 1];
+    lastElement2.classList.add('full-width');
 }
