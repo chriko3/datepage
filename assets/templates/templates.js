@@ -4,8 +4,8 @@ function elementTemplate(dateTitel, key){
     </div>`;
 }
 
-function elementNormalTemplate(input){
-    return `<div class='element'>
+function elementNormalTemplate(input, toDo){
+    return `<div class='element' onclick="${toDo}">
         ${input}
     </div>`;
 }
