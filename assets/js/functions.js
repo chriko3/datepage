@@ -16,11 +16,6 @@ function loadLoveBox2(){
     renderLoveBox2();
 }
 
-function loadSettings(){
-    clearMainContent();
-    renderSettings();
-}
-
 function openAddNewDate() {
     let overlay = document.getElementById('overlay');
     overlay.style.display = 'flex';
@@ -52,14 +47,4 @@ function addRandomEmoji(text) {
     } else {
         return text;
     }
-}
-
-async function resetApp() {
-  if ('caches' in window) {
-    const keys = await caches.keys();
-    await Promise.all(keys.map(k => caches.delete(k)));
-  }
-  window.location.href = window.location.origin;
-  console.log('gemacht');
-  
 }

@@ -55,13 +55,3 @@ function renderLoveBox2(){
     const lastElement2 = elements2[elements2.length - 1];
     lastElement2.classList.add('full-width');
 }
-
-function renderSettings(){
-    const mainContent = document.getElementById('mainContent');
-    mainContent.innerHTML += elementBackButtonTemplate();
-    const elements = mainContent.querySelectorAll('.element');
-    const lastElement = elements[elements.length - 1];
-    lastElement.classList.add('full-width');
-
-    mainContent.innerHTML += elementNormalTemplate('App updaten 🪚', 'resetApp()');
-}
