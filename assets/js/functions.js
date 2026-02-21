@@ -16,6 +16,11 @@ function loadLoveBox2(){
     renderLoveBox2();
 }
 
+function loadPhotobooth(){
+    clearMainContent();
+    renderPhotobooth();
+}
+
 function openAddNewDate() {
     let overlay = document.getElementById('overlay');
     overlay.style.display = 'flex';

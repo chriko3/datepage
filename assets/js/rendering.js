@@ -55,3 +55,35 @@ function renderLoveBox2(){
     const lastElement2 = elements2[elements2.length - 1];
     lastElement2.classList.add('full-width');
 }
+
+function renderPhotobooth(){
+    const mainContent = document.getElementById('mainContent');
+    mainContent.innerHTML = '';
+
+    mainContent.innerHTML += elementBackButtonTemplate();
+    const elements = mainContent.querySelectorAll('.element');
+    const lastElement = elements[elements.length - 1];
+    lastElement.classList.add('full-width');
+    
+    mainContent.innerHTML += elementNormalTemplate(`
+        <video id="video" autoplay playsinline></video>
+        <div id="countdown"></div>
+    `);
+    const elements2 = mainContent.querySelectorAll('.element');
+    const lastElement2 = elements2[elements2.length - 1];
+    lastElement2.classList.add('full-width');
+   
+    mainContent.innerHTML += elementNormalTemplate(`
+        <a id="startPhotobooth">
+            Start 🌟
+        </a>
+    `);
+
+    mainContent.innerHTML += elementNormalTemplate(`
+        <a id="downloadPhotobooth" download="photobooth.png">
+            Download ⬇️
+        </a>
+    `);
+
+    initPhotobooth();
+}
