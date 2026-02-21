@@ -32,13 +32,26 @@ function initPhotobooth() {
         });
     }
 
-    function takePhoto() {
-        const c = document.createElement("canvas");
-        c.width = video.videoWidth || 640;
-        c.height = video.videoHeight || 480;
-        c.getContext("2d").drawImage(video, 0, 0);
-        photoCanvases.push(c);
+function takePhoto() {
+    const c = document.createElement("canvas");
+    const size = 640; // quadratisch
+    c.width = size;
+    c.height = size;
+    const ctx = c.getContext("2d");
+
+    const videoAspect = video.videoWidth / video.videoHeight;
+    if (videoAspect > 1) {
+        const cropWidth = video.videoHeight;
+        const cropX = (video.videoWidth - cropWidth) / 2;
+        ctx.drawImage(video, cropX, 0, cropWidth, video.videoHeight, 0, 0, size, size);
+    } else {
+        const cropHeight = video.videoWidth;
+        const cropY = (video.videoHeight - cropHeight) / 2;
+        ctx.drawImage(video, 0, cropY, video.videoWidth, cropHeight, 0, 0, size, size);
     }
+
+    photoCanvases.push(c);
+}
 
     startBtn.onclick = async () => {
         photoCanvases.length = 0;
